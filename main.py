@@ -1,8 +1,8 @@
 # Libraries
-import unittest
 import PySimpleGUI as sg
 import matplotlib.pyplot as plt
 import numpy as np
+from numpy import sin, cos, tan, sinh, cosh, tanh
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 # Themes
@@ -77,6 +77,7 @@ def plot(equ, min, max):
     # prepare x and y for plotting
     x = np.linspace(float(min), float(max))
     equ = equ.replace('^', '**')
+
     y = eval(equ)
 
     # handle constants case
